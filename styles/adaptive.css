@@ -1,9 +1,6 @@
 
 
 @media screen and (max-width: 1350px) {
-	body {
-		overflow-x: hidden;
-	}
 	.bar {
 		width: 770px;
 		margin: 0 auto;
@@ -28,9 +25,6 @@
 	}	
 }
 @media screen and (max-width: 1190px) {
-	.container {
-		width: 95%;
-	}
 
 	.modal-content {
 		max-width: 1050px
@@ -200,7 +194,7 @@
 		width: 580px;
 
 	}
-
+}
 
 @media screen and (max-width: 620px) {
 		.header-bottom {

@@ -1,10 +1,11 @@
+html, body {
+	overflow-x: hidden; 
+}
+
 body {
 	font-family: 'Montserrat bold', serif;
 	color: #505050;
 	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);;
-}
-body::-webkit-scrollbar { 
-    display: none; 
 }
 
 a {
@@ -24,7 +25,7 @@ header {
 	user-select: none; 
 }
 .container {
-	width: 1170px;
+	max-width: 1170px;
 	margin: 0 auto;
 	padding: 0 15px;
 
@@ -69,12 +70,13 @@ header {
 	box-shadow: 7px 6px 13px 0px rgba(0,0,0,0.75);
 	overflow: hidden;
 	z-index: 10;
+	color: #505050;
 
 
 }
 
 .header-top nav ul li {
-	padding: 10px 0;
+	padding: 10px 10px;
 	border-bottom: 1px solid #b2f2ee;
 	font-family: 'Montserrat light', serif;
 
@@ -82,19 +84,9 @@ header {
 }
 .header-top nav ul li:hover {
 	background: #b2f2ee;
+	color: #fff;
 }
 
-.header-top li:hover a {
-	color: #505050;
-}
-
-.header-top a{
-	display: block;
-	text-decoration: none;
-	color: #50b1bb;
-	width: 150px;
-	padding: 0 20px;
-}
 
 .header-top nav .toggleName {
 	display: none;
@@ -139,8 +131,10 @@ header {
 .btn-contactUs {
 	margin-top: 120px;
 	cursor: pointer;
-	font-family: 'Montserrat light', serif;
+	font-family: 'Montserrat normal', serif;
+	font-size: 18px;
 	background: none;
+	color: #505050;
 	text-transform: uppercase;
 	border: 1px solid #505050;
 	border-radius: 2px;
@@ -802,7 +796,13 @@ footer>section {
 	margin-top: 40px;
 	color: #214744;
 	cursor: pointer;
+	transition: 0.5s
 
+}
+
+.footer-top form input[type='submit']:hover {
+	color: #fff;
+	transition: 0.5s
 }
 .contacts {
 	width: 462px;
@@ -842,6 +842,12 @@ footer>section {
 .footer-social {
 	margin: 5px  0 15px;
 }
+.footer-social a {
+	margin-right: 4px;
+}
 .footer-social a:hover rect {
 		fill: #6eeee4;
+}
+.footer-social a:hover  path {
+	fill: #000;
 }

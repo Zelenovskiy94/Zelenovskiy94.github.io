@@ -24,11 +24,13 @@ $('.slider').slick({
 	autoplay: true,
 	autoplaySpeed: 2000,
 	dots: true,
+	asNavFor: '.review',
 });
 
 $('.review').slick({
 	arrows: true,
-	appendArrows: $('.nav-review')
+	appendArrows: $('.nav-review'),
+	asNavFor: '.slider',
 });
 
 function popup() {
@@ -90,11 +92,26 @@ for(var i =0 ;i<5;i++) {
 }	
 }
 
-var contactUS = document.getElementById('contactUs');
-var toContacts = document.getElementById('toContacts');
-toContacts.onclick = function(){
-	contactUS.scrollIntoView({
+
+function scrollTo(from, to) {
+let a = document.getElementById(to);
+let b = document.getElementById(from);
+return function(event){
+	if(b.contains(event.target)){
+	a.scrollIntoView({
             behavior: 'smooth',
             block: 'start'
         });
+	}
+	}
 }
+
+document.addEventListener('click', scrollTo('btnToContacts', 'contactUs'),false)
+document.addEventListener('click', scrollTo('toAboutUs', 'aboutUs'),false)
+document.addEventListener('click', scrollTo('toOurWorks', 'ourWorks'),false)
+document.addEventListener('click', scrollTo('toOurServices', 'ourServices'),false)
+document.addEventListener('click', scrollTo('toOurTeam', 'ourTeam'),false)
+document.addEventListener('click', scrollTo('toRewiews', 'rewiews'),false)
+document.addEventListener('click', scrollTo('toSponsors', 'sponsors'),false)
+document.addEventListener('click', scrollTo('toContacts', 'contactUs'),false)
+document.addEventListener('click', scrollTo('toFollowUs', 'followUs'),false)
